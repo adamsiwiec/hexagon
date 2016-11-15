@@ -4,6 +4,7 @@
   "description": "Hexo theme and package manager",
   "main": "hpm.js",
   "author": "Adam Siwiec <brickmaster01@gmail.com>",
+  "repository": "https://github.com/adamsiwiec/hexagon",
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
@@ -16,5 +17,12 @@
     "node-cmd": "^1.1.1",
     "node-emoji": "^1.4.1",
     "simple-git": "^1.62.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "xo": "^0.17.1"
   }
 }
