@@ -49,7 +49,7 @@ Please submit Issues or Pull Requests to continue the development of Hexagon
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [NPM site](https://www.npmjs.com/package/hexagon-cli).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [NPM site](https://www.npmjs.com/package/hexagon-cli) or the [releases](https://github.com/adamsiwiec/hexagon/releases).
 
 ## Authors
 

@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 
-var cmd = require('node-cmd');
 var pack = require("./package.json");
-var fs = require('fs');
-var git = require('simple-git')('./themes');
-var colors = require('colors');
+var theme = require('./theme.js');
+var plugin = require('./plugin.js');
 
-
+// Display Version
 if (process.argv.indexOf('--version') != -1 || process.argv.indexOf('-v') != -1) {
     console.log(pack.version);
     process.exit();
 }
 
+console.log('');
 console.log('⬡'.cyan);
 console.log('');
 
@@ -19,6 +18,29 @@ console.log('');
 var params = process.argv;
 params.splice(0, 1);
 params.splice(0, 1);
+
+if (params.indexOf('list') !== -1) {
+
+    if (params.indexOf('themes') !== -1) {
+        theme.list();
+        process.exit();
+
+    } else if (params.indexOf('plugins') !== -1) {
+        plugin.list();
+        process.exit();
+    } else {
+        console.log('Themes:'.cyan);
+        console.log('');
+        theme.list();
+        console.log('');
+        console.log('Plugins:'.cyan);
+        console.log('');
+        plugin.list();
+        process.exit();
+
+    }
+
+}
 
 // Check to make sure 1 flag is provided
 
@@ -33,42 +55,10 @@ if (params.indexOf('-p') != -1 && params.indexOf('-t') != -1) {
 // Check for plugin
 
 if (params.indexOf('-p') != -1) {
-    var pFlag = params.indexOf('-p');
-    params.splice(pFlag, 1);
-    var installList = "";
-    for (i = 0; i < params.length; i++) {
-
-        installList += params[i] + " ";
-    }
-    cmd.get('npm install --save ' + installList, function(data) {
-
-        if (!data) {
-            console.log("⚠️ Uh Oh! Something went wrong check npm-debug.log for more info".red);
-            process.exit();
-        }
-        console.log(data);
-        console.log('👍 Success! Make sure to add your configuration in _config.yml');
-    });
+    plugin.add(params);
 
 }
 // Check for theme
 else if (params.indexOf('-t') != -1) {
-
-    var tFlag = params.indexOf('-t');
-    params.splice(tFlag, 1);
-    for (i = 0; i < params.length; i++) {
-        var repo = params[i];
-        var slash = repo.indexOf('/');
-        var dirName = repo.substring(slash + 1, repo.length);
-        var requestHeader = "https://github.com/"
-        var root = './themes/'
-        var dir = root + dirName;
-
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir);
-        }
-        git.clone(requestHeader + params[i], dirName);
-        console.log('👍 Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml');
-
-    }
+    theme.add(params);
 }
