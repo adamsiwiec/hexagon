@@ -1,4 +1,5 @@
 # Hexagon
+[![Code Climate](https://codeclimate.com/github/adamsiwiec/hexagon/badges/gpa.svg)](https://codeclimate.com/github/adamsiwiec/hexagon) [![npm](https://img.shields.io/npm/dm/hexagon-cli.svg)](https://npmjs.com/package/hexagon-cli)[![npm](https://img.shields.io/npm/v/hexagon-cli.svg)]() [![npm](https://img.shields.io/npm/l/hexagon-cli.svg)]() [![npm](https://david-dm.org/adamsiwiec/hexagon.svg)]()
 
 A package manager for Hexo.
 
@@ -41,6 +42,15 @@ To install a theme:
 * Pass the Github abbreviation
 
 `$ hexagon -t henryhuang/hexo-theme-aloha`
+
+To list all themes, plugins, or both:
+
+    $ hexagon list themes
+
+    $ hexagon list plugins
+
+    $ hexagon list
+
 
 
 ## Contributing
