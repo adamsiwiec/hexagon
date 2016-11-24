@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var colors = require('colors');
 var pack = require('./package.json');
 var theme = require('./theme.js');
 var plugin = require('./plugin.js');
@@ -11,7 +12,7 @@ if (process.argv.indexOf('--version') !== -1 || process.argv.indexOf('-v') !== -
 }
 
 console.log('');
-console.log('⬡'.cyan);
+console.log(colors.cyan('⬡'));
 console.log('');
 
 // Remove unnecessary arguments
@@ -27,11 +28,11 @@ if (params.indexOf('list') !== -1) {
 		plugin.list();
 		process.exit();
 	} else {
-		console.log('Themes:'.cyan);
+		console.log(colors.cyan('Themes:'));
 		console.log('');
 		theme.list();
 		console.log('');
-		console.log('Plugins:'.cyan);
+		console.log(colors.cyan('Plugins:'));
 		console.log('');
 		plugin.list();
 		process.exit();
@@ -56,3 +57,5 @@ if (params.indexOf('-p') !== -1) {
 } else if (params.indexOf('-t') !== -1) {
 	theme.add(params);
 }
+
+console.log('');

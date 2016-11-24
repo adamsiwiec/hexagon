@@ -15,7 +15,6 @@
     "async": "^2.1.2",
     "colors": "^1.1.2",
     "node-cmd": "^1.1.1",
-    "node-emoji": "^1.4.1",
     "simple-git": "^1.62.0"
   },
   "scripts": {

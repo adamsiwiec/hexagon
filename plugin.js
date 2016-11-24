@@ -1,6 +1,7 @@
 var cmd = require('node-cmd');
 var colors = require('colors');
-var pack = require(process.cwd() + '/package.json');
+var cwdPackage = process.cwd() + '/package.json';
+var pack = require(cwdPackage);
 
 var add = function (params) {
 	var pFlag = params.indexOf('-p');
@@ -11,7 +12,7 @@ var add = function (params) {
 	}
 	cmd.get('npm install --save ' + installList, function (data) {
 		if (!data) {
-			console.log('⚠️ Uh Oh! Something went wrong check npm-debug.log for more info'.red);
+			console.log(colors.red('⚠️ Uh Oh! Something went wrong check npm-debug.log for more info'));
 			process.exit();
 		}
 		console.log(data);

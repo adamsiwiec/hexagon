@@ -1,14 +1,15 @@
+var path = require('path');
+var fs = require('fs');
 var colors = require('colors');
 var async = require('async');
+
 try {
 	var git = require('simple-git')('./themes');
 } catch (err) {
 	console.log();
-	console.log('⚠️ Please move to your projects home directory'.red);
+	console.log(colors.red('⚠️ Please move to your projects home directory'));
 	process.exit();
 }
-var fs = require('fs');
-var path = require('path');
 
 function getDirectories(srcpath) {
 	return fs.readdirSync(srcpath).filter(function (file) {
