@@ -1,6 +1,6 @@
 {
   "name": "hexagon-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Hexo theme and package manager",
   "main": "hpm.js",
   "author": "Adam Siwiec <brickmaster01@gmail.com>",

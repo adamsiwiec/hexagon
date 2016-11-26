@@ -1,7 +1,6 @@
 var path = require('path');
 var fs = require('fs');
 var colors = require('colors');
-var async = require('async');
 
 try {
 	var git = require('simple-git')('./themes');
@@ -31,10 +30,10 @@ var add = function (params) {
 		if (!fs.existsSync(dir)) {
 			fs.mkdirSync(dir);
 		}
-		async.series([
-			git.clone(requestHeader + params[i], dirName),
-			console.log('👍 Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml')
-		]);
+
+		git.clone(requestHeader + params[i], dirName).then(function () {
+			console.log('👍 Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml');
+		});
 	}
 };
 
