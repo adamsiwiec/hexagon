@@ -1,11 +1,9 @@
+var cwdPackage = process.cwd() + '/package.json';
 var cmd = require('node-cmd');
 var colors = require('colors');
-var cwdPackage = process.cwd() + '/package.json';
 var pack = require(cwdPackage);
 
 var add = function (params) {
-	var pFlag = params.indexOf('-p');
-	params.splice(pFlag, 1);
 	var installList = '';
 	for (var i = 0; i < params.length; i++) {
 		installList += params[i] + ' ';
@@ -16,7 +14,7 @@ var add = function (params) {
 			process.exit();
 		}
 		console.log(data);
-		console.log('👍 Success! Make sure to add your configuration in _config.yml');
+		console.log('👍 Success! Make sure to add your configuration in config.yml');
 	});
 };
 
@@ -30,8 +28,12 @@ var list = function () {
 			hexoPlugins.push(packageString);
 		}
 	}
+	console.log();
+	console.log('Plugins:');
+	console.log();
+
 	for (var i = 0; i < hexoPlugins.length; i++) {
-		console.log(hexoPlugins[i]);
+		console.log('	- ' + hexoPlugins[i]);
 	}
 };
 exports.list = list;

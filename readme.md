@@ -21,11 +21,11 @@ Install:
 
 You can use it by running:
 
-    $ hexagon -t adamsiwiec/some_theme
+    $ hexagon help
 
     # or
 
-    $ hexa -t adamsiwiec/some_theme # For the minimalists out there
+    $ hexa help # For the minimalists out there
 
 
 ## Usage
@@ -33,27 +33,32 @@ You can use it by running:
 For Hexagon to work properly, make sure you are in your project's root directory.
 
 To install a plugin:
-* Pass the `-p` flag
-* Pass the npm package name
+* Pass the `-p or --plugin` flag or just `plugin`
+* Pass the npm package[s] name
 
-`$ hexagon -p hexo-generator-github`
+    $ hexagon --plugin hexo-generator-github
+    $ hexagon -p hexo-generator-github
+    $ hexagon plugin hexo-generator-github
 
 
 
 To install a theme:
-* Pass the `-t` flag
-* Pass the Github abbreviation
+* Pass the `-t or --theme` flag or just `theme`
+* Pass the Github abbreviation, e.g `adamsiwiec/hexagon-theme`
 
-`$ hexagon -t henryhuang/hexo-theme-aloha`
+    $ hexagon --theme adamsiwiec/hexagon-theme
+    $ hexagon -t adamsiwiec/hexagon-theme
+    $ hexagon theme adamsiwiec/hexagon-theme
 
-To list all themes, plugins, or both:
 
-    $ hexagon list themes
-
-    $ hexagon list plugins
+To list all themes and plugins
 
     $ hexagon list
 
+
+For more commands:
+
+    $ hexagon --help
 
 
 ## Contributing

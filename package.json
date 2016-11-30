@@ -1,6 +1,6 @@
 {
   "name": "hexagon-cli",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Hexo theme and package manager",
   "main": "hpm.js",
   "author": "Adam Siwiec <brickmaster01@gmail.com>",
@@ -12,8 +12,8 @@
     "hexa": "hpm.js"
   },
   "dependencies": {
-    "async": "^2.1.2",
     "colors": "^1.1.2",
+    "commander": "^2.9.0",
     "node-cmd": "^1.1.1",
     "simple-git": "^1.62.0"
   },

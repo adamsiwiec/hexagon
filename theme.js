@@ -17,8 +17,6 @@ function getDirectories(srcpath) {
 }
 
 var add = function (params) {
-	var tFlag = params.indexOf('-t');
-	params.splice(tFlag, 1);
 	for (var i = 0; i < params.length; i++) {
 		var repo = params[i];
 		var slash = repo.indexOf('/');
@@ -40,9 +38,12 @@ var add = function (params) {
 var list = function () {
 	var themePath = process.cwd() + '/themes';
 	var themes = getDirectories(themePath);
+	console.log();
+	console.log('Themes:');
+	console.log();
 
 	for (var i = 0; i < themes.length; i++) {
-		console.log(themes[i]);
+		console.log('	- ' + themes[i]);
 	}
 };
 
