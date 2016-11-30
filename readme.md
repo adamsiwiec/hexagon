@@ -21,12 +21,13 @@ Install:
 
 You can use it by running:
 
-    $ hexagon help
+```bash
+$ hexagon --help
 
-    # or
+# or
 
-    $ hexa help # For the minimalists out there
-
+$ hexa --help # For the minimalists out there
+```
 
 ## Usage
 
@@ -36,20 +37,22 @@ To install a plugin:
 * Pass the `-p or --plugin` flag or just `plugin`
 * Pass the npm package[s] name
 
-    $ hexagon --plugin hexo-generator-github
-    $ hexagon -p hexo-generator-github
-    $ hexagon plugin hexo-generator-github
-
+```bash
+$ hexagon --plugin hexo-generator-github
+$ hexagon -p hexo-generator-github
+$ hexagon plugin hexo-generator-github
+```
 
 
 To install a theme:
 * Pass the `-t or --theme` flag or just `theme`
 * Pass the Github abbreviation, e.g `adamsiwiec/hexagon-theme`
 
-    $ hexagon --theme adamsiwiec/hexagon-theme
-    $ hexagon -t adamsiwiec/hexagon-theme
-    $ hexagon theme adamsiwiec/hexagon-theme
-
+```bash
+$ hexagon --theme adamsiwiec/hexagon-theme
+$ hexagon -t adamsiwiec/hexagon-theme
+$ hexagon theme adamsiwiec/hexagon-theme
+```
 
 To list all themes and plugins
 
