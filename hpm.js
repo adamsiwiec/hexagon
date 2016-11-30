@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 var cli = require('commander');
 var colors = require('colors');
-var theme = require('./theme.js');
-var plugin = require('./plugin.js');
 
 var pack = require('./package.json');
 
@@ -13,12 +11,18 @@ console.log('');
 cli
 	.version(pack.version)
 	.option('-p, --plugin [plugins]', 'Install a plugin[s] from npm', function (plugins) {
+		var plugin = require('./plugin.js');
+
 		plugin.add(plugins);
 	})
 	.option('-t, --theme [themes]', 'Install a theme[s] from Github', function (themes) {
+		var theme = require('./theme.js');
 		theme.add(themes);
 	})
 	.option('-l, --list', 'List all themes and plugins', function() {
+		var plugin = require('./plugin.js');
+		var theme = require('./theme.js');
+
 		plugin.list();
 		theme.list();
 	})
