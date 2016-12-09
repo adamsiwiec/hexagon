@@ -31,6 +31,8 @@ $ hexa --help # For the minimalists out there
 
 ## Usage
 
+![usage_gif](http://i.imgur.com/N8skcKH.gif)
+
 For Hexagon to work properly, make sure you are in your project's root directory.
 
 To install a plugin:
