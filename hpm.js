@@ -19,7 +19,7 @@ cli
 		var theme = require('./theme.js');
 		theme.add(themes);
 	})
-	.option('-l, --list', 'List all themes and plugins', function() {
+	.option('-l, --list', 'List all themes and plugins', function () {
 		var plugin = require('./plugin.js');
 		var theme = require('./theme.js');
 

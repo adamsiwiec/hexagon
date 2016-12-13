@@ -3,7 +3,7 @@ var cmd = require('node-cmd');
 var colors = require('colors');
 var pack = require(cwdPackage);
 
-var add = function (params) {
+var add = function (params, cb) {
 	var installList = '';
 	for (var i = 0; i < params.length; i++) {
 		installList += params[i] + ' ';
@@ -15,7 +15,9 @@ var add = function (params) {
 		}
 		console.log(data);
 		console.log('👍 Success! Make sure to add your configuration in config.yml');
+		cb();
 	});
+
 };
 
 var list = function () {
