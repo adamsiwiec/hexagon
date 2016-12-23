@@ -1,5 +1,6 @@
-
-<img  align="center" src="https://s13.postimg.org/qd8bbi0mv/d41dc22748c_1.png" alt="hexagon">
+<h1 align="center">
+<img  width = "280" height = "210"  src="https://s13.postimg.org/qd8bbi0mv/d41dc22748c_1.png" alt="hexagon">
+</h1>
 
 # Hexagon
 [![Code Climate](https://codeclimate.com/github/adamsiwiec/hexagon/badges/gpa.svg)](https://codeclimate.com/github/adamsiwiec/hexagon) [![npm](https://img.shields.io/npm/dm/hexagon-cli.svg)](https://npmjs.com/package/hexagon-cli) ![npm](https://img.shields.io/npm/v/hexagon-cli.svg) ![npm](https://img.shields.io/npm/l/hexagon-cli.svg) ![npm](https://david-dm.org/adamsiwiec/hexagon.svg) ![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)
