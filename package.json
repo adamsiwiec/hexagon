@@ -22,9 +22,6 @@
     "test": "echo Sorry no tests currently "
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "chai": "^3.5.0",
-    "hexo": "^3.2.2",
-    "xo": "^0.17.1"
+
   }
 }
