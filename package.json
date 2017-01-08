@@ -19,7 +19,7 @@
     "simple-git": "^1.62.0"
   },
   "scripts": {
-    "test": "echo Sorry no tests currently && ava"
+    "test": "echo Sorry no tests currently "
   },
   "devDependencies": {
     "ava": "^0.17.0",
