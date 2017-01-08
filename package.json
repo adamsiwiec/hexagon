@@ -15,10 +15,11 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "node-cmd": "^1.1.1",
+    "ora": "^0.4.0",
     "simple-git": "^1.62.0"
   },
   "scripts": {
-    "test": "echo Sorry no tests currently"
+    "test": "echo Sorry no tests currently && ava"
   },
   "devDependencies": {
     "ava": "^0.17.0",

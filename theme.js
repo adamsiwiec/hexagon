@@ -1,6 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 var colors = require('colors');
+var ora = require('ora');
 
 try {
 	var git = require('simple-git')('./themes');
@@ -17,6 +18,7 @@ function getDirectories(srcpath) {
 }
 
 var add = function (params) {
+	var spinner = ora('Cloning themes').start();
 	for (var i = 0; i < params.length; i++) {
 		var repo = params[i];
 		var slash = repo.indexOf('/');
@@ -30,6 +32,7 @@ var add = function (params) {
 		}
 
 		git.clone(requestHeader + params[i], dirName).then(function () {
+			spinner.success();
 			console.log('👍 Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml');
 		});
 	}
