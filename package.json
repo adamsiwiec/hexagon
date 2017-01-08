@@ -1,6 +1,6 @@
 {
   "name": "hexagon-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hexo theme and package manager",
   "main": "hpm.js",
   "author": "Adam Siwiec <brickmaster01@gmail.com>",
@@ -21,7 +21,5 @@
   "scripts": {
     "test": "echo Sorry no tests currently "
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
