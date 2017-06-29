@@ -14,7 +14,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "node-cmd": "^2.0.0",
+    "node-cmd": "^3.0.0",
     "ora": "^1.1.0",
     "simple-git": "^1.62.0"
   },
