@@ -1,7 +1,7 @@
 var cmd = require('node-cmd');
 var colors = require('colors');
 var ora = require('ora');
-
+let yarn = require('has-yarn');
 
 
 class Plugin {
@@ -12,7 +12,18 @@ class Plugin {
 			for (var i = 0; i < params.length; i++) {
 				installList += params[i] + ' ';
 			}
-
+			if(yarn('.')) {
+				cmd.get('yarn add ' + installList, function (err, data, stderr) {
+				if (!data) {
+					spinner.fail();
+					console.log(colors.red('⚠️ Uh Oh! Something went wrong check npm-debug.log for more info'));
+					process.exit();
+				}
+				spinner.succeed();
+				console.log()
+				console.log('👍  Success! Make sure to add your configuration in config.yml');
+			});
+			} else {
 			cmd.get('npm i --save ' + installList, function (err, data, stderr) {
 				if (!data) {
 					spinner.fail();
@@ -23,6 +34,7 @@ class Plugin {
 				console.log()
 				console.log('👍  Success! Make sure to add your configuration in config.yml');
 			});
+		}
 			return this;
 
 
