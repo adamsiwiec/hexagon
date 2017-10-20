@@ -23,8 +23,7 @@
 	 add(params) {
 
 		 	var spinner = ora('Cloning themes').start();
-		 	for (var i = 0; i < params.length; i++) {
-		 		var repo = params[i];
+		 		let repo = params
 		 		var slash = repo.indexOf('/');
 		 		var dirName = repo.substring(slash + 1, repo.length);
 		 		var requestHeader = 'https://github.com/';
@@ -35,14 +34,14 @@
 		 			fs.mkdirSync(dir);
 		 		}
 
-		 		git.clone(requestHeader + params[i], dirName).then(function (err) {
+		 		git.clone(requestHeader + repo, dirName).then(function (err) {
 					console.log(err);
 		 			spinner.succeed();
-		 			console.log('👍 Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml');
+		 			console.log('👍   Success! Make sure to add   ' + dirName.underline + ' to theme in your _config.yml');
 		 		});
 
 				return this;
-		 	}
+		 	
 
 	 }
 

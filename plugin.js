@@ -13,7 +13,7 @@ class Plugin {
 				installList += params[i] + ' ';
 			}
 
-			cmd.get('npm install --save ' + installList, function (data) {
+			cmd.get('npm i --save ' + installList, function (err, data, stderr) {
 				if (!data) {
 					spinner.fail();
 					console.log(colors.red('⚠️ Uh Oh! Something went wrong check npm-debug.log for more info'));

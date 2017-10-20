@@ -10,11 +10,11 @@ console.log('');
 
 cli
 	.version(pack.version)
-	.option('-p, --plugin [plugins]', 'Install a plugin[s] from npm', function (plugins) {
+	.option('-p, --plugin <plugins>', 'Install a plugin[s] from npm',  (plugins) => {
 		var p = require('./plugin.js');
 		p().add(plugins);
 	})
-	.option('-t, --theme [themes]', 'Install a theme[s] from Github', function (themes) {
+	.option('-t, --theme <themes>', 'Install a theme[s] from Github',  (themes) => {
 		var theme = require('./theme.js');
 		theme().add(themes);
 	})
