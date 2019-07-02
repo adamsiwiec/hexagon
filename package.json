@@ -12,15 +12,18 @@
     "hexa": "hpm.js"
   },
   "dependencies": {
-    "colors": "^1.1.2",
-    "commander": "^2.9.0",
-    "has-yarn": "^1.0.0",
+    "colors": "^1.3.3",
+    "commander": "^2.20.0",
+    "has-yarn": "^2.1.0",
     "node-cmd": "^3.0.0",
-    "ora": "^1.1.0",
-    "simple-git": "^1.62.0"
+    "ora": "^3.4.0",
+    "shelljs": "^0.8.3",
+    "simple-git": "^1.117.0"
   },
   "scripts": {
     "test": "echo Sorry no tests currently "
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
 }
