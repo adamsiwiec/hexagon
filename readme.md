@@ -77,7 +77,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **[Adam Siwiec](https://github.com/adamsiwiec)** - *Initial work*
+* **[Adam Siwiec](https://github.com/adamsiwiec)** - *Initial work*, [Website](https://siwiec.us)
 
 See also the list of [contributors](https://github.com/adamsiwiec/hexagon/contributors) who participated in this project.
 
